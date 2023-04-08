@@ -5,9 +5,9 @@ const SignupForm = () => {
     <>
       {/* Login Text */}
       <div className="flex-col flex mx-auto text-center items-center">
-        <h1 className="text-8xl mt-10 px-2 ">
+        <Link to="/" className="text-8xl mt-10 px-2 ">
           Ren<span className="font-bold text-red-600">Tools</span>
-        </h1>
+        </Link>
         <h2 className="mt-10 text-2xl">Signup for RenTools</h2>
       </div>
       {/* Login Form */}
@@ -29,7 +29,7 @@ const SignupForm = () => {
             <input className="border-2 border-red-500 rounded-xl  w-[500px] bg-transparent p-2 focus:outline-none"type="text" placeholder="Confirm Password..."/>
         </div>
         <div>
-            <button type="submit" className="bg-red-500 border-none text-white w-[500px] py-2 mt-4">Sign up</button>
+            <button type="submit" className="bg-red-500 border-none text-white w-[500px] py-2 mt-4 border border-black rounded-xl px-5 py-1">Sign up</button>
         </div>
         <div>
             <Link to="/Login" className="underline">Already have an account?</Link>

@@ -5,9 +5,9 @@ export const LoginForm = () => {
     <>
       {/* Login Text */}
       <div className="flex-col flex mx-auto text-center items-center">
-        <h1 className="text-8xl mt-10 px-2 ">
+        <Link to="/" className="text-8xl mt-10 px-2 ">
           Ren<span className="font-bold text-red-600">Tools</span>
-        </h1>
+        </Link>
         <h2 className="mt-10 text-2xl">Login to RenTools</h2>
       </div>
       {/* Login Form */}
@@ -23,10 +23,11 @@ export const LoginForm = () => {
             <a href="#" className="underline text-right">Forgot password?</a>
         </div>
         <div>
-            <button type="submit" className="bg-red-500 border-none text-white w-[500px] py-2 mt-4">Login</button>
+            <button type="submit" className="bg-red-500 border-none text-white w-[500px] py-2 mt-4 border border-black rounded-xl px-5">Login</button>
         </div>
         <div>
             <Link to="/Signup" className="underline">Don't have an account yet?</Link>
+            <Link to="/Profile">Account</Link>
         </div>
       </form>
     </>

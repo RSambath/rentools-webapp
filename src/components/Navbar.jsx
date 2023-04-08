@@ -6,12 +6,12 @@ const Navbar = () => {
     <div className="max-w-[1640px] mx-auto flex justify-between items-center p-4">
       {/* Left side*/}
       <div className="flex items-center">
-        <h1 className="text-2xl sm:text-3xl lg:text-4xl px-2">
+        <Link to="/" className="text-2xl sm:text-3xl lg:text-4xl px-2">
           Ren<span className="font-bold text-red-600">Tools</span>
-        </h1>
+        </Link>
       </div>
       {/* Search bar */}
-      <div className="bg-red-200 rounded-full border border-color flex items-center px-2 sm:w-[400px] w-[200px] lg:w-[500px]">
+      <div className="bg-gray rounded-full border border-color flex items-center px-2 sm:w-[400px] w-[200px] lg:w-[500px]">
         <AiOutlineSearch size={25} />
         <input
           className="bg-transparent p-2 focus:outline-none"
