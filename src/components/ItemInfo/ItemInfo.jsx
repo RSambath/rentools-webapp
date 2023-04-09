@@ -2,13 +2,16 @@ import React, { useState } from 'react'
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import Slider from "./ImageSlider";
-import crop from '../Assests/cropped.jpg';
 import { Link } from 'react-router-dom';
 import Map from "./Map/Map";
+import Navbar from '../Navbar';
+import Footer from '../Footer';
 
 function ItemInfo() {
     const [startDate, setStartDate] = useState(new Date());
     return (
+        <>
+        <Navbar></Navbar>
         <div className='h-[200em] w-4/5 m-auto'>
             <div className='w-full bg-slate-500 font-bold text-start p-[1.5em] my-10 text-white text-2xl'>
                 <h1>Ozito PXC 18V Detail Sander</h1>
@@ -71,7 +74,7 @@ function ItemInfo() {
 
                     <h1 className='text-5xl font-bold my-10'>Description</h1>
 
-                    <p className=' text-2xl leading-[2em] text-justify space-y-20'>
+                    <p className=' text-2xl leading-[1.5em] space-y-20'>
                     Craving an electric bike but short on space? Want to take your bike on the TTC at rush hour, on the train for a jaunt to Montreal, or fit two of them in the trunk of your car for a weekend away? Looking for a little boost to get up the hill (or into the wind) on your way home after a long day at work? Fitting an electric bike into your life can be a bit of a mystery. That’s why we’re proud to announce the newest members of the Happy Fleet - famed mystery-solvers Ohms and Wattson.
                     Wattson and Ohms are electric Brompton folding bikes, the pedal-assist version of the premium folding bike. Building on over 40 years of painstaking engineering, gorgeous design, and a penchant for fun, the Brompton Electric is a versatile, efficient, beautiful folding bike - with a secret superpower. When the going gets tough, the electric assist helps you to keep going.
                     The 300Wh 36V motor gives you an assisted range of up to 60km on a single charge. The battery can be fully recharged in just four hours, or simply topped up during a lunch break to extend your range. The bike weighs just 35lbs (16kg), so no range anxiety required - it can be pedalled without assistance quite easily, extending your range for longer rides. The battery even has a USB port so you can keep your phone charged as you go!
@@ -94,7 +97,7 @@ function ItemInfo() {
             <div className='mt-10 flex justify-between'>
                 <article className=' bg-gray-600 rounded-lg p-5 w-[24%]'>
                     <div className="flex items-center mb-4 space-x-4">
-                        <img className="w-10 h-10 rounded-full" src={crop} alt="" />
+                        <img className="w-10 h-10 rounded-full" src={<></>} alt="" />
                         <div className="space-y-1 font-medium dark:text-white">
                             <p>Jese Leos</p>
                         </div>
@@ -119,7 +122,7 @@ function ItemInfo() {
                 </article>
                 <article className=' bg-red-600 rounded-lg p-5 w-[24%]'>
                     <div className="flex items-center mb-4 space-x-4">
-                        <img className="w-10 h-10 rounded-full" src={crop} alt="" />
+                        <img className="w-10 h-10 rounded-full" src={<></>} alt="" />
                         <div className="space-y-1 font-medium dark:text-white">
                             <p>Jese Leos</p>
                         </div>
@@ -144,7 +147,7 @@ function ItemInfo() {
                 </article>
                 <article className=' shadow-2xl rounded-lg p-5 w-[24%]'>
                     <div className="flex items-center mb-4 space-x-4">
-                        <img className="w-10 h-10 rounded-full" src={crop} alt="" />
+                        <img className="w-10 h-10 rounded-full" src={<></>} alt="" />
                         <div className="space-y-1 font-medium ">
                             <p>Jese Leos</p>
                         </div>
@@ -163,7 +166,7 @@ function ItemInfo() {
                 </article>
                 <article className='shadow-2xl rounded-lg p-5 w-[24%]'>
                     <div className="flex items-center mb-4 space-x-4">
-                        <img className="w-10 h-10 rounded-full" src={crop} alt="" />
+                        <img className="w-10 h-10 rounded-full" src={<></>} alt="" />
                         <div className="space-y-1 font-medium ">
                             <p>Jese Leos</p>
                         </div>
@@ -183,6 +186,8 @@ function ItemInfo() {
             </div>
 
         </div>
+        <Footer/>
+        </>
     );
 }
 
