@@ -4,6 +4,8 @@ import Signup from "./pages/Signup";
 import About from "./pages/About";
 import Login from "./pages/Login";
 import Profile from "./pages/Profile";
+import Item from "./pages/Item";
+import Payment from "./pages/Payment";
 import { Route, Routes } from "react-router-dom";
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/Signup" element={<Signup />} />
         <Route path="/Profile/*" element={<Profile />} />
+        <Route path="/Item" element={<Item />} />
+        <Route path="/Payment" element={<Payment />} />
       </Routes>
     </div>
   );
