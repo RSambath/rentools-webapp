@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import DatePicker from 'react-datepicker'; //npm i react-datepicker
 import 'react-datepicker/dist/react-datepicker.css';
 import Slider from "./ImageSlider";
-import crop from '../assets/cropped.jpg';
 import { Link } from 'react-router-dom';
 import Map from "./Map/Map";
 
@@ -94,7 +93,7 @@ function ItemInfo() {
             <div className='mt-10 flex justify-between'>
                 <article className=' bg-gray-600 rounded-lg p-5 w-[24%]'>
                     <div className="flex items-center mb-4 space-x-4">
-                        <img className="w-10 h-10 rounded-full" src={crop} alt="" />
+                        <img className="w-10 h-10 rounded-full" src="" alt="" />
                         <div className="space-y-1 font-medium dark:text-white">
                             <p>Jese Leos</p>
                         </div>
@@ -119,7 +118,7 @@ function ItemInfo() {
                 </article>
                 <article className=' bg-red-600 rounded-lg p-5 w-[24%]'>
                     <div className="flex items-center mb-4 space-x-4">
-                        <img className="w-10 h-10 rounded-full" src={crop} alt="" />
+                        <img className="w-10 h-10 rounded-full" src="" alt="" />
                         <div className="space-y-1 font-medium dark:text-white">
                             <p>Jese Leos</p>
                         </div>
@@ -144,7 +143,7 @@ function ItemInfo() {
                 </article>
                 <article className=' shadow-2xl rounded-lg p-5 w-[24%]'>
                     <div className="flex items-center mb-4 space-x-4">
-                        <img className="w-10 h-10 rounded-full" src={crop} alt="" />
+                        <img className="w-10 h-10 rounded-full" src="" alt="" />
                         <div className="space-y-1 font-medium ">
                             <p>Jese Leos</p>
                         </div>
@@ -163,7 +162,7 @@ function ItemInfo() {
                 </article>
                 <article className='shadow-2xl rounded-lg p-5 w-[24%]'>
                     <div className="flex items-center mb-4 space-x-4">
-                        <img className="w-10 h-10 rounded-full" src={crop} alt="" />
+                        <img className="w-10 h-10 rounded-full" src="" alt="" />
                         <div className="space-y-1 font-medium ">
                             <p>Jese Leos</p>
                         </div>

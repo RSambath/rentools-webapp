@@ -7,9 +7,11 @@ import Profile from "./pages/Profile";
 import Item from "./pages/Item";
 import Payment from "./pages/Payment";
 import { Route, Routes } from "react-router-dom";
+import Navbar from "./components/Navbar";
 function App() {
   return (
     <div>
+      <Navbar/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

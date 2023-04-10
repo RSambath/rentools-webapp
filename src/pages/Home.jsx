@@ -9,8 +9,10 @@ const Home = () => {
     <div>
       <Navbar />
       <HeroImage/>
-      <Checkbox/> 
-      <Menu />
+      <div className="flex m-auto w-4/5">
+        <Checkbox/> 
+        <Menu />
+      </div>
       <Footer/>
     </div>
   );
