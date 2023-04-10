@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import DatePicker from 'react-datepicker';
+import DatePicker from 'react-datepicker'; //npm i react-datepicker
 import 'react-datepicker/dist/react-datepicker.css';
 import Slider from "./ImageSlider";
-import crop from '../Assests/cropped.jpg';
+import crop from '../assets/cropped.jpg';
 import { Link } from 'react-router-dom';
 import Map from "./Map/Map";
 
