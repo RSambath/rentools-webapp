@@ -7,13 +7,11 @@ import Footer from "../components/Footer";
 const Home = () => {
   return (
     <div>
-      <Navbar />
       <HeroImage/>
       <div className="flex m-auto w-4/5">
         <Checkbox/> 
         <Menu />
       </div>
-      <Footer/>
     </div>
   );
 };

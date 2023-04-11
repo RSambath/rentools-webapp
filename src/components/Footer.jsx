@@ -5,7 +5,7 @@ import {FaYoutube} from "react-icons/fa";
 import {FaTwitter} from "react-icons/fa"; 
 export default function Footer(){
 return(
-    <div className = " bg-red-300 h-full w-full justify-around items-start p-20">
+    <div className = " bg-red-300 h-full w-full justify-around items-start p-20 mt-10">
         <div className>
         <ul>
         <h2 className="text-2xl sm:text-3xl lg:text-4xl text-center pb-10">
