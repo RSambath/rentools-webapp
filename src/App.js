@@ -21,6 +21,7 @@ function App() {
         <Route path="/Item" element={<Item />} />
         <Route path="/Payment" element={<Payment />} />
       </Routes>
+      <Footer/>
     </div>
   );
 }
