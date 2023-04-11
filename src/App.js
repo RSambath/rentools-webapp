@@ -8,6 +8,7 @@ import Item from "./pages/Item";
 import Payment from "./pages/Payment";
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer"; 
 function App() {
   return (
     <div>

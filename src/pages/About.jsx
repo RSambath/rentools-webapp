@@ -1,11 +1,14 @@
-import React from 'react'
-
+import React from 'react';
+import AboutSection from "../components/AboutSection"; 
+import StorySection from "../components/StorySection"; 
+import AboutValues from "../components/AboutValues"; 
 const About = () => {
   return (
     <div>
-        <h1>About</h1>
+      <AboutSection/>
+      <StorySection/>
+      <AboutValues/>
     </div>
   )
 }
-
 export default About
