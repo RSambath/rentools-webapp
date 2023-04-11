@@ -1,18 +1,11 @@
-import React from 'react';
-import Navbar from "../components/Navbar";
-import AboutSection from "../components/AboutSection"; 
-import StorySection from "../components/StorySection"; 
-import AboutValues from "../components/AboutValues"; 
-import Footer from "../components/Footer";
+import React from 'react'
+
 const About = () => {
   return (
     <div>
-      <Navbar/>
-      <AboutSection/>
-      <StorySection/>
-      <AboutValues/>
-      <Footer/>
+        <h1>About</h1>
     </div>
   )
 }
+
 export default About
