@@ -12,7 +12,6 @@ const Home = () => {
         <Checkbox/> 
         <Menu />
       </div>
-      <Footer/>
     </div>
   );
 };
