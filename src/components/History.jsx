@@ -36,4 +36,4 @@ const History = () => {
   )
 }
 
-export default Information;
+export default History;
