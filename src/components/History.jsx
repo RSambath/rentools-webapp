@@ -1,5 +1,5 @@
 import React from 'react'
-const Information = () => {
+const History = () => {
   return (
     <>
     <h1 className='font-bold text-red-500 text-4xl mb-10'>Transaction History</h1>
@@ -36,4 +36,4 @@ const Information = () => {
   )
 }
 
-export default Information;
+export default History;
