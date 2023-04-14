@@ -1,0 +1,89 @@
+.tools-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tool-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 16px;
+    padding: 16px;
+    width: 300px;
+}
+
+.tool-card h2 {
+    font-size: 24px;
+    margin-top: 0;
+}
+
+.tool-card p {
+    margin-bottom: 8px;
+}
+
+.tool-card img {
+    border-radius: 4px;
+    max-height: 200px;
+    object-fit: contain;
+    width: 100%;
+}
+
+.tool-card ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.tool-card li {
+    margin-bottom: 4px;
+}
+
+.tool-card {
+    /* background color */
+    background-color: #f5f5f5;
+    /* border color */
+    border: 1px solid #ddd;
+    /* box shadow color */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.tool-card:hover {
+    /* box shadow color on hover */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.tool-name {
+    /* text color */
+    color: #333;
+}
+
+.tool-category {
+    /* text color */
+    color: #666;
+}
+
+.rental-history p {
+    /* text color */
+    color: #666;
+}
+
+.rental-history li {
+    /* text color */
+    color: #666;
+}
+
+
+button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #0066cc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tool-details button:hover {
+    background-color: #0052a3;
+}

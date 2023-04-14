@@ -23,6 +23,8 @@ const Navbar = () => {
       {/* Right side*/}
       <div class="hidden w-full md:block md:w-auto" id="navbar-default">
         <ul class="font-medium text-xl flex flex-col p-1 -mr-6 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
+          <li> <Link className="block py-2 pl-3 pr-4 text-red-500 rounded md:border-0 md:p-0 hover:text-black" to='/tools'>Find Tools</Link></li>
+
           <li>
             <Link className="block py-2 pl-3 pr-4 text-red-500 rounded md:border-0 md:p-0 hover:text-black" to="/">Home</Link>
           </li>
@@ -31,6 +33,9 @@ const Navbar = () => {
           </li>
           <li>
             <Link className="block py-2 pl-3 pr-4 text-red-500 rounded md:border-0 md:p-0 hover:text-black" to="/login">Login</Link>
+          </li>
+          <li>
+            <Link className="block py-2 pl-3 pr-4 text-red-500 rounded md:border-0 md:p-0 hover:text-black" to="/profile/*">Profile</Link>
           </li>
         </ul>
       </div>
