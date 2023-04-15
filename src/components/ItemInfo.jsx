@@ -10,15 +10,15 @@ function ItemInfo() {
     const location = useLocation();
 
     const item = location.state.item;
-    console.log('location >> ' + location)
 
     console.log('item >> ' + item)
+    console.log('tool_name >> ' + item.tool_name)
+
     var [startDate, setStartDate] = useState(null); // Set initial value for startDate to null
     var [endDate, setEndDate] = useState(null); // Set initial value for startDate to null
     const toolId = item.toolId; // Replace with dynamic value from item object
-    const userEmail = 'user1@gmail.com';
-
-
+    const userEmail = localStorage.getItem("email");
+    console.log("toolId>> " + toolId);
     const handleRent = () => {
         startDate = startDate.toLocaleDateString('en-US', { month: '2-digit', day: '2-digit', year: 'numeric' });
         endDate = endDate.toLocaleDateString('en-US', { month: '2-digit', day: '2-digit', year: 'numeric' });
