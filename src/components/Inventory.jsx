@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import AddItemForm from './AddItemForm';
+import AddForm from './AddForm';
 
 const items = [
     {
@@ -56,7 +56,7 @@ const Inventory = () => {
                         <p className="text-center inset-0 text-xl font-semibold leading-7 text-center text-white">Add Items</p>
                     </div>
                 </button>
-                <AddItemForm isOpen={isOpen} closeModal={closeModal} />
+                <AddForm isOpen={isOpen} closeModal={closeModal} />
             </div>
         </div>
 
