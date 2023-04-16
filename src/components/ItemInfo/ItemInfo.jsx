@@ -98,16 +98,14 @@ function ItemInfo() {
                             />
                         </div>
                     </div>
+                    <div className="w-full">
+                        <div className="flex-1 h-full m-auto w-[90%] my-[1em]">
 
-                    <Link to="/Payment">
-                        <button className="w-full">
-                            <div className="flex-1 h-full m-auto w-[90%] my-[1em]">
-                                <div className="flex w-full bg-red-500 shadow rounded-lg py-4 px-16">
-                                    <p className="m-auto inset-0 text-xl font-semibold leading-7 text-center text-white">Book Now</p>
-                                </div>
-                            </div>
-                        </button>
-                    </Link>
+                            <button className="flex w-full bg-red-500 shadow rounded-lg py-4 px-16">
+                                <p className="m-auto inset-0 text-xl font-semibold leading-7 text-center text-white" onClick={handleRent}>Book Now</p>
+                            </button>
+                        </div>
+                    </div>
 
                     <p className='text-[1em] text-center text-gray-600 underline'>Sign Up for Discounts</p>
 
