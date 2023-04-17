@@ -17,15 +17,17 @@ const images = [
   }
 ];
 
-function Item() {
+function Item(props) {
+  const image = props.images;
+
   return (
     <div className='w-[65%]'>
-        
-        <ImageGallery 
-            items={images} 
-            disableArrowKeys={true}
-            className="h-[200px]"
-        />
+
+      <ImageGallery
+        items={[{ original: image, thumbnail: image }]}
+        disableArrowKeys={true}
+        className="h-[200px]"
+      />
     </div>
   );
 }

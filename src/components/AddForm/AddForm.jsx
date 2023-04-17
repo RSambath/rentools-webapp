@@ -13,6 +13,45 @@ const AddItemForm = ({ isOpen, closeModal }) => {
     const [condition, setCondition] = useState("");
     const [images, setImages] = useState([]);
 
+    const toolData = {
+        toolName: name,
+        category: toolCategory,
+        image: 'https://images.unsplash.com/photo-1513467535987-fd81bc7d62f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80',
+        rentalPrice: price,
+        description: description,
+        email: localStorage.getItem("email"),
+        location: 'Seattle'
+    };
+    const createTool = async (toolData) => {
+        console.log("toolData >> " + toolData);
+
+        console.log("JSON.stringify(toolData)   >> " + JSON.stringify(toolData));
+
+        try {
+            const response = await fetch('http://localhost:8080/api/v1/tools/createTool', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(toolData)
+            });
+            const data = await response.json();
+            console.log("response>> " + data);
+            // Display confirmation popup
+            if (response.status === 201) { // Check if the response status code is 200
+                // Display confirmation popup
+                const confirmation = window.confirm('Tool created successfully! Do you want to continue creating tools?');
+                if (confirmation) {
+                    closeModal();
+                    window.location.reload();
+
+                }
+            } return data;
+        } catch (error) {
+            console.error(error);
+        }
+    };
+
     function handleImageUpload(event) {
         const files = event.target.files;
         const newImages = [];
@@ -25,8 +64,8 @@ const AddItemForm = ({ isOpen, closeModal }) => {
                 newImages.push(imageUrl);
             }
         }
-  
-      setImages([...images, ...newImages]);
+
+        setImages([...images, ...newImages]);
     }
 
     function handleImageDelete(index) {
@@ -54,6 +93,8 @@ const AddItemForm = ({ isOpen, closeModal }) => {
         console.log("Description:", description);
         console.log("Condition:", condition);
         console.log("images: ", images)
+        createTool(toolData);
+
     };
 
     return (
@@ -83,43 +124,43 @@ const AddItemForm = ({ isOpen, closeModal }) => {
 
                         <div className="flex justify-end mt-4">
                             <button
-                            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-4 rounded text-[1.3em]"
-                            onClick={handleNext}
+                                className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-4 rounded text-[1.3em]"
+                                onClick={handleNext}
                             >
-                            Next
+                                Next
                             </button>
                         </div>
                     </div>
-                )}       
+                )}
 
                 {currentPage === 2 && (
-                <div className="my-8 min-h-screen">
-                    <h1 className="text-2xl font-bold mb-10 text-[2em]">Step 1: Select Tool Category & Location</h1>
-                    <select
-                        className="w-full border border-gray-300 rounded-md py-3 px-4 text-[1.5em] mb-10"
-                        value={toolCategory}
-                        onChange={(e) => setToolCategory(e.target.value)}
-                    >
-                        <option className="bg-gray-100 hover:bg-gray-200" value="">Select Category</option>
-                        <option className="bg-gray-100 hover:bg-gray-200" value="Power Tools">Power Tools</option>
-                        <option className="bg-gray-100 hover:bg-gray-200" value="Hand Tools">Hand Tools</option>
-                        <option className="bg-gray-100 hover:bg-gray-200" value="Gardening Tools">Gardening Tools</option>
-                        <option className="bg-gray-100 hover:bg-gray-200" value="Electronics & Phtotography">Electronics & Phtotography</option>
-                        <option className="bg-gray-100 hover:bg-gray-200" value="Gaming Equipments">Gaming Equipments</option>
-                        <option className="bg-gray-100 hover:bg-gray-200" value="Art & Crafts">Art and Crafts</option>
-                        <option className="bg-gray-100 hover:bg-gray-200" value="Toy & Model">Toy & Model</option>
-                        <option className="bg-gray-100 hover:bg-gray-200" value="Others">Others</option>
-                    </select>
-                    <div className="flex justify-between">
-                        <button
-                        className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded text-[1.3em]"
-                        onClick={handlePrevious}
+                    <div className="my-8 min-h-screen">
+                        <h1 className="text-2xl font-bold mb-10 text-[2em]">Step 1: Select Tool Category & Location</h1>
+                        <select
+                            className="w-full border border-gray-300 rounded-md py-3 px-4 text-[1.5em] mb-10"
+                            value={toolCategory}
+                            onChange={(e) => setToolCategory(e.target.value)}
                         >
-                        Previous
-                        </button>
-                        <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded text-[1.3em]" onClick={handleNext}>Next</button>
+                            <option className="bg-gray-100 hover:bg-gray-200" value="">Select Category</option>
+                            <option className="bg-gray-100 hover:bg-gray-200" value="Power Tools">Power Tools</option>
+                            <option className="bg-gray-100 hover:bg-gray-200" value="Hand Tools">Hand Tools</option>
+                            <option className="bg-gray-100 hover:bg-gray-200" value="Gardening Tools">Gardening Tools</option>
+                            <option className="bg-gray-100 hover:bg-gray-200" value="Electronics & Phtotography">Electronics & Phtotography</option>
+                            <option className="bg-gray-100 hover:bg-gray-200" value="Gaming Equipments">Gaming Equipments</option>
+                            <option className="bg-gray-100 hover:bg-gray-200" value="Art & Crafts">Art and Crafts</option>
+                            <option className="bg-gray-100 hover:bg-gray-200" value="Toy & Model">Toy & Model</option>
+                            <option className="bg-gray-100 hover:bg-gray-200" value="Others">Others</option>
+                        </select>
+                        <div className="flex justify-between">
+                            <button
+                                className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded text-[1.3em]"
+                                onClick={handlePrevious}
+                            >
+                                Previous
+                            </button>
+                            <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded text-[1.3em]" onClick={handleNext}>Next</button>
+                        </div>
                     </div>
-                </div>
                 )}
 
                 {currentPage === 3 && (
@@ -141,21 +182,21 @@ const AddItemForm = ({ isOpen, closeModal }) => {
                         <div className="flex justify-start mb-8">
                             <label className="mr-4">
                                 <input
-                                type="radio"
-                                value="Perweek"
-                                checked={date === "Perweek"}
-                                onChange={(e) => setDatePay(e.target.value)}
-                                className="mr-2"
+                                    type="radio"
+                                    value="Perweek"
+                                    checked={date === "Perweek"}
+                                    onChange={(e) => setDatePay(e.target.value)}
+                                    className="mr-2"
                                 />
                                 Price Per Week
                             </label>
                             <label>
                                 <input
-                                type="radio"
-                                value="PerDay"
-                                checked={date === "PerDay"}
-                                onChange={(e) => setDatePay(e.target.value)}
-                                className="mr-2"
+                                    type="radio"
+                                    value="PerDay"
+                                    checked={date === "PerDay"}
+                                    onChange={(e) => setDatePay(e.target.value)}
+                                    className="mr-2"
                                 />
                                 Price Per Day
                             </label>
@@ -199,21 +240,21 @@ const AddItemForm = ({ isOpen, closeModal }) => {
                         <div className="flex justify-start mb-8">
                             <label className="mr-4">
                                 <input
-                                type="radio"
-                                value="Rent"
-                                checked={rentOrSale === "Rent"}
-                                onChange={(e) => setRentOrSale(e.target.value)}
-                                className="mr-2"
+                                    type="radio"
+                                    value="Rent"
+                                    checked={rentOrSale === "Rent"}
+                                    onChange={(e) => setRentOrSale(e.target.value)}
+                                    className="mr-2"
                                 />
                                 Rent
                             </label>
                             <label>
                                 <input
-                                type="radio"
-                                value="Sale"
-                                checked={rentOrSale === "Sale"}
-                                onChange={(e) => setRentOrSale(e.target.value)}
-                                className="mr-2"
+                                    type="radio"
+                                    value="Sale"
+                                    checked={rentOrSale === "Sale"}
+                                    onChange={(e) => setRentOrSale(e.target.value)}
+                                    className="mr-2"
                                 />
                                 Sale
                             </label>
@@ -242,8 +283,8 @@ const AddItemForm = ({ isOpen, closeModal }) => {
                             <div className="flex justify-center bg-gray-300 p-10 mt-10">
                                 {images.map((image, index) => (
                                     <div key={image}>
-                                    <img className="h-[20em] mr-10" src={image} alt="preview"/>
-                                    <button onClick={() => handleImageDelete(index)} className="text-red-500">Remove</button>
+                                        <img className="h-[20em] mr-10" src={image} alt="preview" />
+                                        <button onClick={() => handleImageDelete(index)} className="text-red-500">Remove</button>
                                     </div>
                                 ))}
                             </div>
@@ -251,25 +292,25 @@ const AddItemForm = ({ isOpen, closeModal }) => {
 
                         <div className="flex justify-between">
                             <button
-                            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded text-[1.3em]"
-                            onClick={handlePrevious}
+                                className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded text-[1.3em]"
+                                onClick={handlePrevious}
                             >
-                            Previous
+                                Previous
                             </button>
                             <button
-                            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded text-[1.3em]"
-                            onClick={handleSubmit}
+                                className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded text-[1.3em]"
+                                onClick={handleSubmit}
                             >
-                            Submit
+                                Submit
                             </button>
                         </div>
                     </div>
                 )}
-            <button class="absolute top-0 right-0 bg-red-500 text-white py-2 px-4 mt-4 mr-10 rounded-md hover:bg-red-600" onClick={closeModal}>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-            </button>
+                <button class="absolute top-0 right-0 bg-red-500 text-white py-2 px-4 mt-4 mr-10 rounded-md hover:bg-red-600" onClick={closeModal}>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
             </div>
 
         </div>
