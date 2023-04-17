@@ -31,6 +31,9 @@ const Navbar = () => {
           <li>
             <Link className="block py-2 pl-3 pr-4 text-red-500 rounded md:border-0 md:p-0 hover:text-black" to="/login">Login</Link>
           </li>
+          <li>
+            <Link className="block py-2 pl-3 pr-4 text-red-500 rounded md:border-0 md:p-0 hover:text-black" to="/profile/*">Profile</Link>
+          </li>
         </ul>
       </div>
     </div>

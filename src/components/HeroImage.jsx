@@ -1,11 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 export default function HeroImage(){
    return(
     <div className = "bg-white">
         <main>
             {/* Hero */}
             <div className = "relative">
-                <div aria-hidden = "true" className = "absolute hidden h-3/4 w-1/2 bg-gray-300 lg:block"/>
+                <div className = "absolute hidden h-3/4 w-1/2 bg-gray-300 lg:block"/>
                 <div className = "relative bg-gray-300 lg:bg-transparent">
                 <div className="mx-auto max-w-8xl px-1 sm:px-1 lg:grid lg:grid-cols-2 lg:px-9">
                 <div className="mx-auto max-w-2xl py-20 lg:max-w-none lg:py-64">
@@ -19,7 +20,7 @@ export default function HeroImage(){
                         <li>Help adventure enthusiasts in your community. </li>
                     </p>
                     <div className = "mt-5">
-                        <a href ="#" className="inline-block rounded-md border border-transparent bg-red-600 py-3 px-8 font-medium text-white hover:bg-blue-500">LEARN MORE</a>
+                        <Link className="inline-block rounded-md border border-transparent bg-red-600 py-3 px-8 font-medium text-white hover:bg-blue-500" to= "/about">LEARN MORE</Link>
                     </div>
                     </div>
                     </div>

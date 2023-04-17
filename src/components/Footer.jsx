@@ -24,7 +24,7 @@ return(
     <ul>
         <p className = "text-lg sm:text-1xl lg:text-2xl px-2">
             <ul className = "text-center justify-center items-center font-mono">
-                RenTool@gmail.com
+                RenTools@gmail.com
             </ul>
             <ul className = "text-center justify-center items-center font-mono">
                 +1 123 456 7899
