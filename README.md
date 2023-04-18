@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+<=========================== RenTools Website ===========================>
+# This is a read me about how to get the website up and running on your computer. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The code for the website can be found at https://github.com/RSambath/rentools-webapp
 
-## Available Scripts
+#Follow the steps below to download front end code
+--------------------------------------------
 
-In the project directory, you can run:
+1. Go to https://github.com/RSambath/rentools-webapp
+2. Click the Green <> Code button towards in the middle of the screen.
+3. Click download zip
+This will download the code into a zip file which we will extract later. 
+4. Extract the zip file into a folder. 
+5. You should see a folder named rentools-webapp
+   - From within this folder is where you need to run the front-end code from.
 
-### `npm start`
+#Follow the steps below to run the front end code
+--------------------------------------------
+1. Run the code using a Code Editor (IDE) For our team we used Microsoft Visual Studio 	
+   - Code which can be downloaded here: https://code.visualstudio.com/
+2. Install the dependencies needed to run the code. 
+   - The code has dependencies such as Node.js (NPM), React.js, Tailwindcss, React-Router-Dom, React-Datepicker, React-Image-Gallery.
+   - Make sure all of these dependencies are installed otherwise the code will not run.
+3. Open the editor terminal. In the case of Visual Studio Code that can be done using the shortcut Ctrl+Shift+`(tilde) or from the tab at the top.
+4. If node is already installed, then type in "npm start"
+5. This should automatically open your default web browser to display the frontend. 
+   - However, you might notice that the images are not there and the login page do not     work. The backend code also need to run at the same time in order for the full functionality of the code to work.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#Follow the steps below to download the back end code
+-------------------------------------------
+1. Go to https://github.com/ankozan/rentit
+2. Repeat the steps within the download code section to retrieve the back end code
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#Follow the steps below to run the back end code
+-------------------------------------------
+1. Run the code using another instance of code editor (IDE)
+2. The backend code needs Java to work. Make sure you have the latest version of Java installed which can be found here
+   - https://www.java.com/en/
+3. Some extensions are needed if you are using Visual Studio Code to run. 
+   - The extensions we used are: Extension Pack for Java and Spring Initializr Java Support.
+4. If the above steps are done correctly. Then you can build the backend by either clicking the play button at the top or by pressing F5.
+With both frontend and backend running. The website should now display correctly. 
+For more help and clarifications on steps please refer to the RenTools Team.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
