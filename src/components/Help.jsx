@@ -30,7 +30,7 @@ function ItemInfo() {
                     <li>1. Respect all other members and do not send spam, offensive, or threatening messages, leave comments, or engage in any other form of offensive communication.</li>
                     <li>2. Only create listings for goods you own, are authorized to rent, and are in safe condition to use. (It is not permitted to list any Dangerous Goods, such as Chemicals, Alcohols, Tobacco or Weapons)</li>
                     <li>3. Try to answer all messages in a timely fashion.</li>
-                    <li>4. The La'Rent is a third-party marketplace and by using it, you must also comply with New Zealand laws, regulations, safety measures, and/or booking agreement(s) by listing owners that are applicable.</li>
+                    <li>4. The RenTool is a third-party marketplace and by using it, you must also comply with New Zealand laws, regulations, safety measures, and/or booking agreement(s) by listing owners that are applicable.</li>
                     <li>5. We do not allow contact information or external links (URL's) on listings and/or in images that are added to listings. This includes emails, websites, and phone numbers.</li>
                     <li>6. For the safety and security of our community, we do not allow contact information to be sent through our messaging prior to a confirmed booking. Sending messages containing your personal information, contact information, or taking transactions off our platform is against our policies and can result in being removed from our community.</li>
                 </ol>

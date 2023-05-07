@@ -13,22 +13,22 @@ return(
         </h2>
         <div className = "flex gap-20 pb-7 justify-center ">
             {/*Social Media Icon Section */}
-            <FaInstagram className = "text-2xl hover:text-indigo-700"/>
-            <FaFacebook className = "text-2xl hover:text-indigo-700"/>
-            <FaYoutube className = "text-2xl hover:text-indigo-700"/>
-            <FaTwitter className = "text-2xl hover:text-indigo-700"/>
+            <FaInstagram className="text-2xl hover:text-indigo-700"/>
+            <FaFacebook className="text-2xl hover:text-indigo-700"/>
+            <FaYoutube className="text-2xl hover:text-indigo-700"/>
+            <FaTwitter className="text-2xl hover:text-indigo-700"/>
         </div>
         </ul>
         </div>
 <div className = "p-5">
     <ul>
         <p className = "text-lg sm:text-1xl lg:text-2xl px-2">
-            <ul className = "text-center justify-center items-center font-mono">
+            <li className = "text-center justify-center items-center font-mono">
                 RenTools@gmail.com
-            </ul>
-            <ul className = "text-center justify-center items-center font-mono">
+            </li>
+            <li className = "text-center justify-center items-center font-mono">
                 +1 123 456 7899
-            </ul>
+            </li>
         </p>
     </ul>
 </div>

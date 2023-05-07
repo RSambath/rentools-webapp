@@ -1,31 +1,14 @@
 import React, { useState, useEffect } from "react";
 import AddItemForm from './AddForm/AddForm';
 
-const items = [
-    {
-        id: 1,
-        name: 'Item 1',
-        image: 'https://via.placeholder.com/150',
-        Status: '',
-        Price: ''
-    },
-    {
-        id: 2,
-        name: 'Item 2',
-        image: 'https://via.placeholder.com/150',
-    },
-    {
-        id: 3,
-        name: 'Item 3',
-        image: 'https://via.placeholder.com/150',
-    },
-];
+import Edit from './AddForm/EditInv';
 
 const Inventory = () => {
 
     const [isOpen, setIsOpen] = useState(false);
     const email = localStorage.getItem("email");
     const [historyData, setHistoryData] = useState([]);
+    const [isOpenEdit, setIsOpenEdit] = useState(false);
 
     const openModal = () => {
         setIsOpen(true);
@@ -33,6 +16,14 @@ const Inventory = () => {
 
     const closeModal = () => {
         setIsOpen(false);
+    };
+
+    const openEdit = () => {
+        setIsOpenEdit(true);
+    };
+
+    const closeEdit = () => {
+        setIsOpenEdit(false);
     };
 
     useEffect(() => {
@@ -46,13 +37,15 @@ const Inventory = () => {
                 console.error('Error:', error);
             });
     }, [email]);
+
     return (<>
+
         <div className='flex justify-between'>
             <h1 className='font-bold text-red-500 text-4xl w-[40%]'>Inventory</h1>
             <div>
                 <button onClick={openModal}>
                     <div className="flex w-full bg-red-500 shadow rounded-lg py-4 px-16">
-                        <p className="text-center inset-0 text-xl font-semibold leading-7 text-white">Add Items</p>
+                        <p className="text-center inset-0 text-xl font-semibold leading-7 text-center text-white">Add Items</p>
                     </div>
                 </button>
                 <AddItemForm isOpen={isOpen} closeModal={closeModal} />
@@ -106,9 +99,10 @@ const Inventory = () => {
                         </td>
                         <td className="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-500 text-sm leading-5 font-medium">
                             <div className="px-6 pt-4 pb-2">
-                                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mr-2">
+                                <button onClick={openEdit} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mr-2">
                                     Edit
                                 </button>
+                                <Edit isOpen={isOpenEdit} closeEdit={closeEdit}/>
                                 <button className="bg-red-500 hover:bg-red-400 text-white font-bold py-2 px-4 rounded-full">
                                     Cancel
                                 </button>
