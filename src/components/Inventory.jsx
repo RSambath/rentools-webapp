@@ -52,7 +52,7 @@ const Inventory = () => {
             <div>
                 <button onClick={openModal}>
                     <div className="flex w-full bg-red-500 shadow rounded-lg py-4 px-16">
-                        <p className="text-center inset-0 text-xl font-semibold leading-7 text-center text-white">Add Items</p>
+                        <p className="text-center inset-0 text-xl font-semibold leading-7 text-white">Add Items</p>
                     </div>
                 </button>
                 <AddItemForm isOpen={isOpen} closeModal={closeModal} />
