@@ -26,7 +26,7 @@ export const LoginForm = () => {
         </div>
         <div className="flex flex-col text-left space-y-1">
           <label className="text-lg font-bold">Password</label>
-          <input className="border-2 border-red-500 rounded-xl  w-[500px] bg-transparent p-2 focus:outline-none" type="text" placeholder="Password..." />
+          <input className="border-2 border-red-500 rounded-xl  w-[500px] bg-transparent p-2 focus:outline-none" type="password" placeholder="Password..." />
           {/* Forget Password */}
           <a href="#" className="underline text-right">Forgot password?</a>
         </div>
@@ -37,7 +37,6 @@ export const LoginForm = () => {
           </Link>        </div>
         <div>
           <Link to="/Signup" className="underline">Don't have an account yet?</Link>
-          <Link to="/Profile">Account</Link>
         </div>
       </form>
     </>

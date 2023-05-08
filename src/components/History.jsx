@@ -21,15 +21,15 @@ const History = () => {
   return (
     <>
       <h1 className='font-bold text-red-500 text-4xl mb-10'>Transaction History</h1>
-      <table class="table-auto w-full">
+      <table className="table-auto w-full">
         <thead>
           <tr className='text-gray-500'>
-            <th class="px-4 py-2">Date</th>
-            <th class="px-4 py-2">Receipt No.</th>
-            <th class="px-4 py-2">Item Name</th>
-            <th class="px-4 py-2">Owner Email</th>
-            <th class="px-4 py-2">Amount</th>
-            <th class="px-4 py-2">Print</th>
+            <th className="px-4 py-2">Date</th>
+            <th className="px-4 py-2">Receipt No.</th>
+            <th className="px-4 py-2">Item Name</th>
+            <th className="px-4 py-2">Owner Email</th>
+            <th className="px-4 py-2">Amount</th>
+            <th className="px-4 py-2">Print</th>
           </tr>
         </thead>
         <tbody>
