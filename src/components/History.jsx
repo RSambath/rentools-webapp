@@ -5,6 +5,9 @@ const History = () => {
 
   const email = localStorage.getItem("email");
   useEffect(() => {
+    if (!email) {
+      window.location.href = "/";
+    }
     const fetchRentals = async () => {
       console.log("email > " + email);
       const response = await fetch(`http://localhost:8080/api/v1/tools/rentals?email=${email}`);
@@ -37,9 +40,9 @@ const History = () => {
             <tr className='text-center text-[1.2em]' key={rental.id}>
               <td className="border px-5 py-5">{rental.startDate} - {rental.endDate}</td>
               <td className="border px-5 py-5">{rental.toolId}</td>
-              <td className="border px-5 py-5">rental.tool.name</td>
+              <td className="border px-5 py-5">{rental.tool_name}</td>
               <td className="border px-5 py-5">{rental.user}</td>
-              <td className="border px-5 py-5">rental.tool.price</td>
+              <td className="border px-5 py-5">{rental.rental_price}</td>
               <td className="border px-5 py-5">
                 <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded-full">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 inline-block mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
