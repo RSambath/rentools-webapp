@@ -25,8 +25,6 @@ const ProfileMenu = () => {
             <MenuButton logo={<MdPayment size={40}/>} text="Payment" to="/Profile/Payment"/>
             <MenuButton logo={<MdInventory2 size={40}/>} text="Inventory" to="/Profile/Inventory"/>
             <MenuButton logo={<AiOutlineHistory size={40}/>} text="History" to="/Profile/History"/>
-            <MenuButton logo={<BsFillBookmarkStarFill size={40}/>} text="Bookmarks" to="/Profile/Bookmarks"/>
-            <MenuButton logo={<FiSettings size={40}/>} text="Settings" to="/Profile/Settings"/>
             <MenuButton logo={<FiHelpCircle size={40}/>} text="Help" to="/Profile/Help"/>
 
         </div>

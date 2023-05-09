@@ -17,10 +17,6 @@ const ProfileRight = () => {
         </Route>
         <Route path="/Inventory" element={<Inventory />}>
         </Route>
-        <Route path="/Bookmarks" element={<h1>Bookmarks</h1>}>
-        </Route>
-        <Route path="/Settings" element={<h1>Settings</h1>}>
-        </Route>
         <Route path="/Help" element={<Help />}>
         </Route>
     </Routes>
