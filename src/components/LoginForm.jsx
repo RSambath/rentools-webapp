@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form"; //npm install react-hook-form
 import { withRouter } from 'react-router-dom';
@@ -27,13 +27,6 @@ export const LoginForm = () => {
     } catch (error) {
       setMessage(true);
     }
-  };
-
-
-  const handleLogin = () => {
-    localStorage.removeItem("email");
-    localStorage.setItem("email", email);
-    // perform login
   };
 
 
